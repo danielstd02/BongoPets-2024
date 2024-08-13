@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bongo Pets - Peluquería de Mascotas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="Imagenes/logo.png" alt="Logo de Bongo Pets" class="logo"> Bongo Pets
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link nav-link-scroll" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-scroll" href="#quienes-somos">Quiénes Somos</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-scroll" href="#reservas">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-scroll" href="#redes-sociales">Redes Sociales</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-scroll" href="#sedes">Sedes</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-scroll" href="#servicios">Servicios</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio" class="jumbotron jumbotron-fluid text-white text-center" style="background-image: url('Imagenes/mascotas.jpg'); background-size: cover;">
+        <div class="container">
+            <h1 class="display-4">¡Bienvenidos a Bongo Pets!</h1>
+            <p class="lead">La mejor peluquería para tus mascotas.</p>
+            <img src="Imagenes/doge.png" alt="Imagen de bienvenida" class="img-fluid rounded">
+        </div>
+    </section>
+
+    <section id="quienes-somos" class="container my-5">
+        <h2 class="text-center">Quiénes Somos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Somos una peluquería de mascotas dedicada a brindar el mejor cuidado y servicio a tus compañeros peludos. Nuestro equipo está altamente capacitado y comprometido con el bienestar de tus mascotas.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="Imagenes/quienes-somos.png" alt="Nuestro equipo" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+    <section id="reservas" class="container my-5">
+        <h2 class="text-center">Reservas</h2>
+        <form id="reserva-form" class="mx-auto" style="max-width: 600px;">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="mascota">Nombre de la Mascota:</label>
+                <input type="text" id="mascota" name="mascota" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Reservar</button>
+        </form>
+    </section>
+
+    <section id="redes-sociales" class="container my-5 text-center">
+        <h2>Redes Sociales</h2>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#" class="btn btn-outline-primary">Facebook</a></li>
+            <li class="list-inline-item"><a href="#" class="btn btn-outline-primary">Instagram</a></li>
+            <li class="list-inline-item"><a href="#" class="btn btn-outline-primary">Twitter (X)</a></li>
+        </ul>
+    </section>
+
+    <section id="sedes" class="container my-5">
+        <h2 class="text-center">Nuestras Sedes</h2>
+        <p class="text-center">Encuentra la sede más cercana a ti.</p>
+        <ul class="list-group">
+            <li class="list-group-item">Sede 1: Calle 4 71-48</li>
+            <li class="list-group-item">Sede 2: Calle 13 115-81</li>
+        </ul>
+    </section>
+
+    <section id="servicios" class="container my-5">
+        <h2 class="text-center">Servicios</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Baño y Corte</li>
+            <li class="list-group-item">Desparasitación</li>
+            <li class="list-group-item">Consulta Veterinaria</li>
+        </ul>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Bongo Pets. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        // Desplazamiento suave al hacer clic en enlaces del menú
+        document.querySelectorAll('.nav-link-scroll').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

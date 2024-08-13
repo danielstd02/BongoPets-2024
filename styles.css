@@ -1,0 +1,121 @@
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5dc; 
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: #8bc34a; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff; 
+}
+
+header .navbar-brand .logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px; 
+}
+
+header .navbar-nav .nav-link {
+    color: #fff;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+header .navbar-nav .nav-link:hover {
+    color: #d4f3e3;
+}
+
+.jumbotron {
+    background-attachment: fixed;
+    color: white;
+    padding: 150px 0;
+    background-color: #00bfff; 
+    background-image: url('mascotas.jpg');
+    background-size: cover;
+}
+
+.jumbotron h1, .jumbotron p {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.container h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    border-bottom: 2px solid #ff8a8a; 
+    display: inline-block;
+    color: #ff8a8a; 
+}
+
+.container p, .container ul {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.form-control {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #00bfff;
+    border-color: #00bfff;
+}
+
+.btn-primary:hover {
+    background-color: #009acd;
+    border-color: #009acd;
+}
+
+.list-inline-item a {
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #ffa500; 
+    transition: background-color 0.3s;
+}
+
+.list-inline-item a:hover {
+    background-color: #cc8400;
+}
+
+footer {
+    background-color: #8bc34a; 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+#quienes-somos .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
